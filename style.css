@@ -15,4 +15,52 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+body.dark {
+  background-color: lightblue;
+  color: blue;
+}
+body .toggle {
+  padding: 0.8rem 1.3rem;
+  font-size: 1rem;
+  position: relative;
+  top: -100px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+body .clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+body .clock-container .clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+body .clock-container .clock .needle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 75px;
+  width: 3px;
+  border: 2px solid;
+  transform-origin: bottom center;
+}
+body .clock-container .clock .needle.hour {
+  height: 60px;
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+body .clock-container .clock .needle.min {
+  height: 80px;
+  transform: translate(-50%, -100%) rotate(30deg);
+}
+body .clock-container .clock .needle.sec {
+  height: 100px;
+  transform: translate(-50%, -100%) rotate(50deg);
+  color: orange;
 }/*# sourceMappingURL=style.css.map */
