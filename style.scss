@@ -6,6 +6,21 @@
   margin: 0;
   box-sizing: border-box;
 }
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+
+html {
+  transition: all 0.5s ease-in;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #333;
+  background-color: #111;
+  color: var(--primary-color);
+}
 body {
   background-color: burlywood;
   width: 100%;
@@ -14,58 +29,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // transition: 0.5s ease;
-  &.dark {
-    background-color: lightblue;
-    color: blue;
-  }
-  .toggle {
-    padding: 0.8rem 1.3rem;
-    font-size: 1rem;
-    position: relative;
-    top: -100px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    // transition: 0.5s ease;
-  }
-  .clock-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.3);
-
-    .clock {
-      position: relative;
-      width: 200px;
-      height: 200px;
-      .needle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        // width: 75px;
-        // height: 3px;
-        height: 75px;
-        width: 3px;
-        border: 2px solid;
-        transform-origin: bottom center;
-        &.hour {
-          height: 60px;
-          transform: translate(-50%, -100%) rotate(0deg);
-        }
-        &.min {
-          height: 80px;
-          transform: translate(-50%, -100%) rotate(30deg);
-        }
-        &.sec {
-          height: 100px;
-          transform: translate(-50%, -100%) rotate(50deg);
-
-          color: orange;
-        }
-      }
-    }
-  }
 }
+.toggle {
+  padding: 0.8rem 1.3rem;
+  font-size: 1rem;
+  position: relative;
+  top: -60px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  // transition: 0.5s ease;
+}
+
+// needle color : background-color: var(--primary-color);
