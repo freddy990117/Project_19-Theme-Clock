@@ -29,18 +29,73 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.toggle {
-  padding: 0.8rem 1.3rem;
-  font-size: 1rem;
-  position: relative;
-  top: -60px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  // transition: 0.5s ease;
+  .toggle {
+    padding: 0.8rem 1.3rem;
+    font-size: 1rem;
+    position: relative;
+    top: -60px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    // transition: 0.5s ease;
+  }
+  .clock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .clock {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: rgba(0, 0, 0, 0.4);
+      .center-pointer {
+        position: absolute;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: black;
+      }
+      .needle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 40px;
+        background-color: var(--primary-color);
+        transform-origin: bottom center;
+        &.hour {
+          transform: translate(-50%, -100%) rotate(0deg);
+        }
+        &.min {
+          transform: translate(-50%, -100%) rotate(0deg);
+          height: 60px;
+        }
+        &.sec {
+          transform: translate(-50%, -100%) rotate(0deg);
+          height: 80px;
+          background-color: orange;
+        }
+      }
+    }
+    .time {
+      margin: 1rem;
+      font-size: 2rem;
+    }
+    .date {
+      text-transform: uppercase;
+      .circle {
+        background-color: white;
+        padding: 0.2rem;
+        border-radius: 50%;
+      }
+    }
+  }
 }
 
 // needle color : background-color: var(--primary-color);

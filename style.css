@@ -32,8 +32,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.toggle {
+body .toggle {
   padding: 0.8rem 1.3rem;
   font-size: 1rem;
   position: relative;
@@ -43,4 +42,59 @@ body {
   cursor: pointer;
   background-color: var(--primary-color);
   color: var(--secondary-color);
+}
+body .clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body .clock-container .clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body .clock-container .clock .center-pointer {
+  position: absolute;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+}
+body .clock-container .clock .needle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 40px;
+  background-color: var(--primary-color);
+  transform-origin: bottom center;
+}
+body .clock-container .clock .needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+body .clock-container .clock .needle.min {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 60px;
+}
+body .clock-container .clock .needle.sec {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 80px;
+  background-color: orange;
+}
+body .clock-container .time {
+  margin: 1rem;
+  font-size: 2rem;
+}
+body .clock-container .date {
+  text-transform: uppercase;
+}
+body .clock-container .date .circle {
+  background-color: white;
+  padding: 0.2rem;
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */
