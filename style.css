@@ -85,17 +85,12 @@ body .clock-container .clock .needle {
   background-color: var(--primary-color);
   transition: all 0.8s ease;
 }
-body .clock-container .clock .needle.hour {
-  transform: translate(-50%, -100%) rotate(30deg);
-}
 body .clock-container .clock .needle.min {
   height: 50px;
-  transform: translate(-50%, -100%) rotate(60deg);
 }
 body .clock-container .clock .needle.sec {
   height: 70px;
   background-color: orange;
-  transform: translate(-50%, -100%) rotate(90deg);
 }
 body .clock-container .time {
   margin: 1rem;

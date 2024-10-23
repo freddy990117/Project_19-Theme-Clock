@@ -80,17 +80,13 @@ body {
         width: 2px;
         background-color: var(--primary-color);
         transition: all 0.8s ease;
-        &.hour {
-          transform: translate(-50%, -100%) rotate(30deg);
-        }
+
         &.min {
           height: 50px;
-          transform: translate(-50%, -100%) rotate(60deg);
         }
         &.sec {
           height: 70px;
           background-color: orange;
-          transform: translate(-50%, -100%) rotate(90deg);
         }
       }
     }
